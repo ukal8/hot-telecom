@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" media="(max-width:639px)" href="css/hottelecom-small.css">
+	<link rel="stylesheet" media="(min-width:640px)" href="css/hottelecom-large.css">
+	<title>Hottelecom</title>
+</head>
+<body onload="timeLeft()">
+
+	<header>
+
+		<div class="logo">
+			<div class="cat">
+				<span class="line"></span>
+				<span class="txt">Наручные часы</span>
+				<span class="line"></span>
+			</div>
+			<div class="brand-name">Patek Philippe</div>
+			<div class="brand-slog">Grand Complications</div>
+		</div>
+
+		<div class="label">
+			<p><span class="num">70</span><span class="perc">&#37;</span><br><span class="sale">скидка</span></p>
+		</div>
+
+		<div class="quote">
+			<p>&#8220;</p>
+			<p>Потрясающий подарок</p>
+			<p>для себя или близкого человека</p>
+			<p>&mdash; Смолин Антон</p>
+		</div>
+
+	</header>
+
+	<footer>
+
+		<div class="watch">
+			<img src="assets/img/hottelecom/watch.png">	
+		</div>
+
+		<div class="data">
+			<div class="price">
+				<p>Только сегодня новая цена</p>
+				<p>552 000 <span>BYR</span></p>
+				<p>Старая цена: 1 902 000 BYR</p>
+			</div>
+
+			<div class="counter">
+				<div class="clock">
+					<div class="num-plate plate1"><span id="hours"></span></div>
+					<div class="colon">&#58;</div>
+					<div class="num-plate plate2"><span id="min"></span></div>
+					<div class="colon">&#58;</div>
+					<div class="num-plate plate3"><span id="sec"></span></div>
+				</div>
+			</div>
+
+			<div class="btn">
+				<a href="#"><span>Заказать</span></a>
+			</div>
+
+		</div>
+
+	</footer>
+	<script>
+		function timeLeft() {
+			var now = new Date();
+			var hoursleft = 23 - now.getHours();
+			var minutesleft = 59 - now.getMinutes();
+			var secondsleft = 59 - now.getSeconds();
+
+			if (hoursleft < 10)
+				hoursleft = "0" + hoursleft;
+			if(minutesleft < 10)
+				minutesleft = "0" + minutesleft;
+			if(secondsleft < 10)
+				secondsleft = "0" + secondsleft;
+
+			document.getElementById('hours').innerHTML = hoursleft;
+			document.getElementById('min').innerHTML = minutesleft;
+			document.getElementById('sec').innerHTML = secondsleft;
+		}
+
+			setInterval(timeLeft, 1000);
+
+	</script>
+</body>
+</html>
