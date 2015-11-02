@@ -4,6 +4,9 @@
 }
 
 header {
+	position: relative;
+	max-width: 920px;
+	margin: auto;
 	height: 450px;
 	background-image: url("../img/bg_1.png");
 	background-repeat: no-repeat;
@@ -128,7 +131,9 @@ header {
 
 footer {
 	position: relative;
+	max-width: 920px;
 	height: 560px;
+	margin: auto;
 	background-image: url("../img/bg_2.png");
 	background-repeat: no-repeat;
 	background-position: center;
